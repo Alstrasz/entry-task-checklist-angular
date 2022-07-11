@@ -1,2 +1,9 @@
-<p>window works!</p>
-<p>api url: {{projects_serive.api_url}}</p>
+<mat-toolbar color="primary">
+    <button mat-raised-button color="accent" (click)="open_new_project_dialog()">
+        New project
+    </button>
+  
+    <p>api url: {{projects_serive.api_url}}</p>
+</mat-toolbar>
+
+<projects-projects-collection></projects-projects-collection>

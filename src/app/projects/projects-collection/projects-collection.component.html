@@ -1,1 +1,6 @@
-<p>projects-collection works!</p>
+<div fxLayout fxLayout="row wrap" fxLayoutAlign="center">
+    <div *ngFor="let prop of projects | keyvalue">
+        <projects-project-card [project]="prop.value"></projects-project-card>
+    </div>
+</div>
+  

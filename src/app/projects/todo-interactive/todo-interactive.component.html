@@ -1,1 +1,5 @@
-<p>todo-interactive works!</p>
+<mat-checkbox [(ngModel)]="todo.isCompleted" (change)="update_value($event.checked)">
+    <p [ngClass]="{'crossed_text': todo.isCompleted}">
+        {{todo.text}}
+    </p>
+</mat-checkbox>

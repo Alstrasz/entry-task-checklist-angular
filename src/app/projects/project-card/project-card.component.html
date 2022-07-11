@@ -1,1 +1,10 @@
-<p>project-card works!</p>
+<mat-card class="card mat-elevation-z4">
+    <mat-card-title>{{project.title}}</mat-card-title>
+    <mat-card-content>
+        <mat-list>
+            <mat-list-item *ngFor="let prop of project.todos | keyvalue">
+                <projects-todo-interactive [todo]="prop.value" [project_id]="project.id"></projects-todo-interactive>
+            </mat-list-item>
+        </mat-list>
+    </mat-card-content>
+</mat-card>
