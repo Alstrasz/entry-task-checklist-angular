@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ProjectsService } from '../projects.service';
 import { ProjectsCollectionElement } from '../types/projects_collection';
 
 @Component( {
@@ -9,7 +10,7 @@ import { ProjectsCollectionElement } from '../types/projects_collection';
 export class ProjectCardComponent implements OnInit {
     @Input() project!: ProjectsCollectionElement;
 
-    constructor () { }
+    constructor ( public projects_service: ProjectsService ) { }
 
     ngOnInit (): void {
     }

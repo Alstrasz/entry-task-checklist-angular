@@ -7,4 +7,8 @@
             </mat-list-item>
         </mat-list>
     </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-stroked-button (click)="projects_service.open_new_project_dialog(project.title)">New todo</button>
+    </mat-card-actions>
 </mat-card>

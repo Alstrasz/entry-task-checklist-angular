@@ -1,5 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { ProjectsService } from '../projects.service';
 
 @Component( {
     selector: 'app-modal-create-project',
@@ -7,8 +9,27 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
     styleUrls: ['./modal-create-project.component.scss'],
 } )
 export class ModalCreateProjectComponent implements OnInit {
-    constructor ( @Inject( MAT_DIALOG_DATA ) public data: { project_title: string } ) { }
+    new_project_form!: FormGroup;
+
+    constructor (
+        @Inject( MAT_DIALOG_DATA ) public data: { project_title?: string },
+        private fb: FormBuilder,
+        private projects_service: ProjectsService,
+        public dialogRef: MatDialogRef<ModalCreateProjectComponent>,
+    ) { }
 
     ngOnInit (): void {
+        this.new_project_form = this.fb.group( {
+            title: [this.data?.project_title || '', [Validators.required]],
+            text: ['', [Validators.required]],
+        } );
+    }
+
+    send_data () {
+        if ( this.new_project_form.valid ) {
+            this.projects_service.create_new_todo( this.new_project_form.value ).then( () => {
+                this.dialogRef.close();
+            } );
+        }
     }
 }

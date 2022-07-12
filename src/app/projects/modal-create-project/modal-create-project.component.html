@@ -1,1 +1,21 @@
-<p>q {{data.project_title}}</p>
+<h1 mat-dialog-title>Create new todo</h1>
+<mat-dialog-content>
+    <form [formGroup]="new_project_form">
+        <mat-form-field class="full_width" appearance="fill">
+            <mat-label>Project title</mat-label>
+            <input matInput type="text" formControlName="title" placeholder="Work">
+        </mat-form-field>
+        
+        <mat-form-field class="full_width" appearance="fill">
+            <mat-label>Todo text</mat-label>
+            <input matInput type="text" formControlName="text" placeholder="Meeting" cdkFocusInitial>
+        </mat-form-field>
+        
+        <div style="display: flex;">
+            <button type="submit" mat-flat-button color="primary" class="submit_button" (click)="send_data()">Submit</button> 
+            <button mat-stroked-button mat-dialog-close>Cancel</button>
+        </div>
+    </form>
+</mat-dialog-content>
+
+  
