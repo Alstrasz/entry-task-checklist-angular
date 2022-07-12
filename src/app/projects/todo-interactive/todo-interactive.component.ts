@@ -20,7 +20,6 @@ export class TodoInteractiveComponent implements OnInit {
     }
 
     update_value ( new_value: boolean ) {
-        console.log( this.todo.id, this.project_id, this.todo.isCompleted, new_value );
         this.projects_service.update_todo_value( this.project_id, this.todo.id, new_value ).catch( () => {
             console.log( 'reset is needed' );
             this.todo.isCompleted = !new_value;

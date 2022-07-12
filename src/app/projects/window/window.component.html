@@ -1,9 +1,10 @@
-<mat-toolbar color="primary">
-    <button mat-raised-button color="accent" (click)="projects_serive.open_new_project_dialog()">
+<mat-toolbar color="primary" class="header_container">
+    <h1>
+        Todo list
+    </h1>
+    <button mat-raised-button color="accent" class="new_project_button" (click)="projects_serive.open_new_project_dialog()">
         New project
     </button>
-  
-    <p>api url: {{projects_serive.api_url}}</p>
 </mat-toolbar>
 
 <projects-projects-collection></projects-projects-collection>
