@@ -16,6 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ApiToggleComponent } from './api-toggle/api-toggle.component';
 
 @NgModule( {
     declarations: [
@@ -24,6 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         ProjectCardComponent,
         TodoInteractiveComponent,
         ModalCreateProjectComponent,
+        ApiToggleComponent,
     ],
     imports: [
         CommonModule,

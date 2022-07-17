@@ -10,7 +10,7 @@
             <mat-label>Todo text</mat-label>
             <input matInput type="text" formControlName="text" placeholder="Meeting" cdkFocusInitial>
         </mat-form-field>
-        
+        <div *ngIf="error_occured">qwe</div>
         <div class="buttons_container">
             <button type="submit" mat-flat-button color="primary" class="submit_button" (click)="send_data()">Submit</button> 
             <button mat-stroked-button mat-dialog-close>Cancel</button>

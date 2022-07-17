@@ -1,0 +1,11 @@
+<div>
+    Api toggle:
+    <ng-container *ngIf="projects_service.use_graphql">
+        <button mat-raised-button (click)="toggle_api()">Use ruby on rails</button>
+    </ng-container>
+    
+    <ng-container *ngIf="!projects_service.use_graphql">
+        <button mat-raised-button color="accent" (click)="toggle_api()">Use nestjs & graphql</button>
+    </ng-container>
+</div>
+
