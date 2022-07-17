@@ -42,7 +42,6 @@ export class ProjectsService {
                     .watchQuery( {
                         query: ALL_PROJECTS,
                     } ).valueChanges.subscribe( ( res ) => {
-                        console.log( res );
                         if ( ( res.data as any )?.all_projects ) {
                             console.log( 'resolved' );
                             resolve( ( res.data as any )?.all_projects as Array<Project> );
@@ -140,7 +139,6 @@ export class ProjectsService {
                         },
                         errorPolicy: 'ignore',
                     } ).subscribe( ( res ) => {
-                        console.log( '11111', res );
                         if ( ( res.data as any )?.create_todo ) {
                             this.update_project_subject.next( ( res.data as any )?.create_todo );
                             resolve( ( res.data as any )?.create_todo );

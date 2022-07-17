@@ -4,7 +4,7 @@ Project done as an entry task for https://www.oblakogroup.ru/assignment/full-sta
 
 It represents simple todo list with ability to check out todos, create new todos and projects.
 
-Frontend uses angular and material ui, backend - ruby on rails
+Frontend uses angular and material ui, backend - ruby on rails or nestjs & graphql (can be toogled)
 
 # To run
 
@@ -23,4 +23,5 @@ For dev
 
 # Related projects
 
-Backend: https://github.com/Alstrasz/entry-task-checklist-ruby
+Backend ruby: https://github.com/Alstrasz/entry-task-checklist-ruby
+Backend nest: https://github.com/Alstrasz/entry-task-checklist-nest
